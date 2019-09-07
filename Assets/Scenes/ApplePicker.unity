@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1223971606}
   - component: {fileID: 1223971605}
   - component: {fileID: 1223971604}
+  - component: {fileID: 1223971607}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -194,6 +195,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1223971607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223971603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a3d71221222c840b0040d2b3e113a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 8818592706746520337, guid: 89eb6934703c38e43bd40ae8ebb175b2,
+    type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1 &1362454352
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +293,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
+    - target: {fileID: 1306934071696673588, guid: 248e92c4710884d4d86cdf035488fcf9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1260099367486789252, guid: 248e92c4710884d4d86cdf035488fcf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -339,6 +362,27 @@ PrefabInstance:
         type: 3}
       propertyPath: chanceToChangeDirections
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832552135795178045, guid: 248e92c4710884d4d86cdf035488fcf9,
+        type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 2422996616399739671, guid: 68b7ef14b4ad82e4f8905f103d4168b2,
+        type: 3}
+    - target: {fileID: 5141458551169371899, guid: 248e92c4710884d4d86cdf035488fcf9,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503128104491608282, guid: 248e92c4710884d4d86cdf035488fcf9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 912358201475519298, guid: 248e92c4710884d4d86cdf035488fcf9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 248e92c4710884d4d86cdf035488fcf9, type: 3}

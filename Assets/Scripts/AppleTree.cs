@@ -16,6 +16,8 @@ public class AppleTree : MonoBehaviour
 
     public float secondsBetweenAppleDrops = 1f;
 
+    
+
     void Start()
     {
         Invoke("DropApple", 2f);
@@ -36,6 +38,8 @@ public class AppleTree : MonoBehaviour
         {
             speed = -Mathf.Abs(speed); //Move left
         }
+
+        
     }
 
     void FixedUpdate()
