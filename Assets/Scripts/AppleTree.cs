@@ -18,7 +18,7 @@ public class AppleTree : MonoBehaviour
 
     void Start()
     {
-        
+        Invoke("DropApple", 2f);
     }
 
     
@@ -44,5 +44,12 @@ public class AppleTree : MonoBehaviour
         {
             speed *= -1; //Change direction
         }
+    }
+    
+    void DropApple()
+    {
+        GameObject apple = Instantiate<GameObject>(applePrefab);
+        apple.transform.position = transform.position;
+        Invoke("DropApple", secondsBetweenAppleDrops);  
     }
 }
