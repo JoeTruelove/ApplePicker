@@ -12,6 +12,7 @@ public class ApplePicker : MonoBehaviour
     public float basketBottomY = -14f;
     public float basketSpacingY = 2f;
     public List<GameObject> basketList;
+    public int desBaskets = 3;
 
     void Start()
     {
@@ -33,11 +34,11 @@ public class ApplePicker : MonoBehaviour
         {
             Destroy(tGO);
         }
-        int basketIndex = basketList.Count-1;
+        int basketIndex = basketList.Count-desBaskets;
         GameObject tBasketGO = basketList[basketIndex];
         basketList.RemoveAt(basketIndex);
         Destroy(tBasketGO);
-
+        desBaskets = desBaskets - 1;
         if(basketList.Count == 0)
         {
             SceneManager.LoadScene("_Scene_0");
