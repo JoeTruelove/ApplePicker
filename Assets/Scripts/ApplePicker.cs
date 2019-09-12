@@ -12,7 +12,8 @@ public class ApplePicker : MonoBehaviour
     public float basketBottomY = -14f;
     public float basketSpacingY = 2f;
     public List<GameObject> basketList;
-    public int desBaskets = 3;
+    private int desBaskets = 3;
+
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class ApplePicker : MonoBehaviour
     public void AppleDestroyed()
     {
         GameObject[] tAppleArray = GameObject.FindGameObjectsWithTag("Apple");
+        int desBaskets = basketList.Count;
         foreach(GameObject tGO in tAppleArray)
         {
             Destroy(tGO);
@@ -38,7 +40,11 @@ public class ApplePicker : MonoBehaviour
         GameObject tBasketGO = basketList[basketIndex];
         basketList.RemoveAt(basketIndex);
         Destroy(tBasketGO);
-        desBaskets = desBaskets - 1;
+        if (desBaskets > 0)
+        {
+            desBaskets = desBaskets - 1;
+        }
+        
         if(basketList.Count == 0)
         {
             SceneManager.LoadScene("_Scene_0");
